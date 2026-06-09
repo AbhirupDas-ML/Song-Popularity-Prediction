@@ -1,0 +1,16 @@
+# Ignore Virtual Environments
+venv/
+.venv/
+env/
+
+# Ignore Python runtime structures
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ignore local models (Optional: Only if individual files exceed 100MB)
+# your XGBoost joblib files should be quite small (~5-15MB), making them perfectly fine to track directly!
+
+# Ignore massive raw data tracks
+data/
+*.csv
