@@ -37,7 +37,7 @@ The XGBoost classifier revealed fascinating insights into what mathematically co
 2. **`explicit`**: The presence of explicit content is a major distinguishing factor in modern charting tracks.
 3. **`instrumentalness`**: Highly predictive, as mainstream hits strongly favor vocal-driven mixing over heavy instrumental presence.
 
-![alt text](image.png)
+![alt text](<assets/Feature Importances.png>)
 
 ### 2. Classification Evaluation (Hit vs. Flop)
 Because "Hits" are a severe minority class in the music industry (~11% of the test set), the `XGBClassifier` was trained using `scale_pos_weight`to prevent the model from blindly predicting "Flop" every time.
@@ -51,7 +51,7 @@ Because "Hits" are a severe minority class in the music industry (~11% of the te
 
 * **Confusion Matrix Insight:** The model successfully identified 836 true hits out of the test set. By utilizing class weights, the model is tuned to be slightly more aggressive in predicting hits (sacrificing some precision for a 71% recall rate). This makes it a highly optimized tool for A&R teams who would rather cast a wider net than accidentally miss a potential breakout track.
 
-![alt text](image-1.png)
+![alt text](<assets/Confusion Matrix.png>)
 
 ### 3. Regression Performance (Popularity Score)
 The `XGBRegressor` evaluates the continuous popularity grading (0-100 scale). It maintains highly consistent error rates across all data splits, proving the model is not overfitting:
@@ -62,5 +62,5 @@ The `XGBRegressor` evaluates the continuous popularity grading (0-100 scale). It
 ## 📸 Application Interface
 The Gradio frontend provides a clean, responsive dashboard for users to tweak track parameters and simulate different mixing & mastering choices to see how it affects the AI's predicted popularity score.
 
-![alt text](image-3.png)
+![alt text](assets/Gradio_UI.png)
 
